@@ -2,7 +2,7 @@ import altair as alt
 import pandas as pd
 import streamlit as st
 
-st.set_page_donfig("Illinois State Buildings", layout="wide")
+st.set_page_config("Illinois State Buildings", layout="wide")
 @st.cache_data
 def load_data():
     df = pd.read_csv("building_inventory.csv")
