@@ -14,7 +14,7 @@ df = load_data()
 st.title("Illinois State Owned Buildings")
 st.caption("Source: building_inventory.csv")
 st.sidebar.header("filters")
-agences = sorted(df["Agency Name"].unique())
+agencies = sorted(df["Agency Name"].unique())
 top_agencies = df["Agency Name"].value_counts().head(5).index.tolist()
 chosen = st.sidebar.multiselect("Agency", agencies, default = top_agencies)
 statuses = st.sidebar.multiselect(
