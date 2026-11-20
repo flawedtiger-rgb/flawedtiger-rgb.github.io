@@ -18,7 +18,7 @@ agencies = sorted(df["Agency Name"].unique())
 top_agencies = df["Agency Name"].value_counts().head(5).index.tolist()
 chosen = st.sidebar.multiselect("Agency", agencies, default = top_agencies)
 statuses = st.sidebar.multiselect(
-    "building status", sorted(df['Bldg Status'].unique()), defaut = ["in use"]
+    "building status", sorted(df['Bldg Status'].unique()), default = ["In Use"]
     
 )
 year_min, year_max = st.sidebar.slider("year constructed", 1800, 2019, (1800,2019))
